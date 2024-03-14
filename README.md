@@ -6,6 +6,7 @@ This is a Java project that uses Spring Boot and Gradle. It implements JWT (JSON
 
 - User registration and login
 - JWT generation for authenticated users
+- JWT refresh token
 - JWT verification for protected endpoints
 
 - 
@@ -23,10 +24,12 @@ This is a Java project that uses Spring Boot and Gradle. It implements JWT (JSON
   SecretKey key = generateKey(256);
   System.out.println("Key: " + java.util.Base64.getEncoder().encodeToString(key.getEncoded()));
 
-   Generate random secretKey for Jwt
+  Generate random secretKey for Jwt so you can use it in JWT_SECRET which is environment variable
 
 The environment variables used in  application.yml file are:  
 MYSQL_USER
 MYSQL_PASSWORD
 JWT_SECRET
 These variables are used to configure the database connection and JWT secret . You should set these environment variables with the appropriate values in your deployment environment.
+
+
